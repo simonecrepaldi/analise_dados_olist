@@ -12,12 +12,12 @@ Os dados foram disponibilizados pela Olist no [Kaggle](https://www.kaggle.com/da
 **customers_dataset**
 *	customer_id: id do cliente (chave para o orders_dataset.xlsx)
 *	customer_unique_id: id única do cliente
-*	customer_zip_code_prefix: 5 primeiros dígitos do código de endereçamento postal do cliente
+*	customer_zip_code_prefix: 5 primeiros dígitos do código de endereçamento postal do cliente (CEP)
 *	customer_city: cidade do cliente
 *	customer_state: estado do cliente
 
 **geolocation_dataset**
-*	geolocation_zip_code_prefix: 5 primeiros dígitos do código de endereçamento
+*	geolocation_zip_code_prefix: 5 primeiros dígitos do código de endereçamento (CEP)
 *	geolocation_lat: latitude
 *	geolocation_lng: longitude
 *	geolocation_city: cidade
@@ -71,6 +71,9 @@ Os dados foram disponibilizados pela Olist no [Kaggle](https://www.kaggle.com/da
 
 **sellers_dataset**
 *	seller_id: id única do vendedor
-*	seller_zip_code_prefix: 5 primeiros dígitos do código de endereçamento postal do vendedor
+*	seller_zip_code_prefix: 5 primeiros dígitos do código de endereçamento postal do vendedor (CEP)
 *	seller_city: cidade do vendedor
 *	seller_state: estado do vendedor
+
+
+![image](https://github.com/simonecrepaldi/analise_dados_olist/assets/77973522/381d0577-9667-4033-bd90-148677cab373)
