@@ -9,21 +9,26 @@ Os dados foram disponibilizados pela Olist no [Kaggle](https://www.kaggle.com/da
 ![image](https://github.com/simonecrepaldi/analise_dados_olist/assets/77973522/dfc869b9-2e9f-4a64-82ad-2fe7da6b9888)
 
 
-**customers_dataset**
+### customers
+*Possui informações sobre os clientes e a sua localização, como CEP, cidadade e estado. Para identificar a quantidade de clientes únicos devemos usar a "customer_unique_id", portando um mesmo cliente pode ter mais de uma "customer_id".*
 *	customer_id: id do cliente (chave para o orders_dataset.xlsx)
 *	customer_unique_id: id única do cliente
 *	customer_zip_code_prefix: 5 primeiros dígitos do código de endereçamento postal do cliente (CEP)
 *	customer_city: cidade do cliente
 *	customer_state: estado do cliente
 
-**geolocation_dataset**
-*	geolocation_zip_code_prefix: 5 primeiros dígitos do código de endereçamento (CEP)
+
+### geolocation
+*Aqui podemos obter a longitude e latitude de cada CEP e, com isso, determinar as distâncias entre vendedores e clientes.*
+*	geolocation_zip_code_prefix: 5 primeiros dígitos do código de endereçamento (CEP)*
 *	geolocation_lat: latitude
 *	geolocation_lng: longitude
 *	geolocation_city: cidade
 *	geolocation_state: estado
 
-**order_items_dataset**
+
+### order_items
+*Contém as informações sobre os itens de cada pedido. Caso um pedido tenha mais de um item, eles irão aparecer cada um em uma linha diferente. Podemos identificar a quantidade de itens do pedido através do "order_item_id".*
 *	order_id: id única do pedido
 *	order_item_id: número sequencial que identifica o número de itens em um mesmo pedido
 *	product_id: id única do produto
@@ -32,14 +37,18 @@ Os dados foram disponibilizados pela Olist no [Kaggle](https://www.kaggle.com/da
 *	price: preço do item
 *	freight_value: preço do frete do item (se um pedido tiver mais de um item, o valor do frete é dividido entre os itens)
 
-**order_payments_dataset.**
+
+### order_payments
+*Mostra as informações sobre o pagamento do pedido.*
 *	order_id: id única do pedido
 *	payment_sequential: o pagamento pode ser feito com mais de um método de pagamento. Nesse caso, será gerada uma sequência numérica dos métodos escolhidos.
-*	payment_type: método de pagamento (credit_card, boleto, voucher, not_defined)
+*	payment_type: método de pagamento escolhido pelo cliente (credit_card, boleto, voucher, not_defined)
 *	payment_installments: número de parcelas
 *	payment_value: valor total do pagamento
 
-**order_reviews_dataset**
+
+### order_reviews
+*As avaliações feitas pelos clientes são apresentadas nesse dataset. Quando o pedido é entregue, o cliente recebe um email com uma pesquisa de satisfação para avaliar a experiência com uma nota de 1 a 5 e, caso queira, pode também deixar um comentário. O email também é enviado se acabar o prazo de entrega previsto no momento da compra, mesmo se ela não tiver sido entregue.*
 *	review_id: id única da avaliação
 *	order_id: id única do pedido
 *	review_score: pontuação da avaliação (1 a 5) data pelo cliente na pesquisa de satisfação
@@ -48,7 +57,9 @@ Os dados foram disponibilizados pela Olist no [Kaggle](https://www.kaggle.com/da
 *	review_creation_date: data de envio da pesquisa de satisfação ao cliente
 *	review_answer_timestamp: data/hora da resposta da pesquisa de satisfação feita pelo cliente
 
-**orders_dataset**
+
+### orders
+*É o dataset principal que contém as informações sobre o pedido como o status, data da compra, id do cliente, datas de entrega ao cliente, data de aprovação do pagamento, entre outras. Através dele conseguimos relacionar os demais datasets utilizando a "order_id" e "customer_id".*
 *	order_id: id única do pedido
 *	customer_id: id do cliente (chave para o customer_dataset.xlsx)
 *	order_status: status do pedido (delivered, shipped, canceled, approved, created, invoiced, processing, unavailable)
@@ -58,7 +69,9 @@ Os dados foram disponibilizados pela Olist no [Kaggle](https://www.kaggle.com/da
 *	order_delivered_customer_date: data/hora da entrega do pedido ao cliente
 *	order_estimated_delivery_date: data estimada de entrega informada ao cliente no momento da compra
 
-**products_dataset**
+
+### products
+*Possui informações sobre os produtos a venda, como categoria e atributos (peso e dimensões).*
 *	product_id: id única do produto
 *	product_category: categoria do produto
 *	product_name_lenght: comprimento (número de caracteres) do nome do produto
@@ -69,11 +82,14 @@ Os dados foram disponibilizados pela Olist no [Kaggle](https://www.kaggle.com/da
 *	product_height_cm: altura do produto (em centímetros)
 *	product_width_cm: largura do produto (em centímetros)
 
-**sellers_dataset**
+
+### sellers
+*Mostra as informações sobre os vendedores como a id e a localização (CEP, cidade e estado).*
 *	seller_id: id única do vendedor
 *	seller_zip_code_prefix: 5 primeiros dígitos do código de endereçamento postal do vendedor (CEP)
 *	seller_city: cidade do vendedor
 *	seller_state: estado do vendedor
 
 
+## Mapeamento do Processo de Compra
 ![image](https://github.com/simonecrepaldi/analise_dados_olist/assets/77973522/381d0577-9667-4033-bd90-148677cab373)
