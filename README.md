@@ -6,7 +6,7 @@ Depois que um consumidor realiza uma compra, a Olist notifica um vendedor para a
 ## Dados
 Os dados foram disponibilizados pela Olist no [Kaggle](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce) e possuem informações de mais de 100 mil pedidos realizadtos entre 2016 e 2018, distribuídos em 8 datasets.
 
-![image](https://github.com/simonecrepaldi/analise_dados_olist/assets/77973522/dfc869b9-2e9f-4a64-82ad-2fe7da6b9888)
+![image](https://github.com/simonecrepaldi/analise_dados_olist/blob/main/banco_de_dados.png)
 
 
 ### customers
@@ -92,4 +92,4 @@ Os dados foram disponibilizados pela Olist no [Kaggle](https://www.kaggle.com/da
 
 
 ## Mapeamento do Processo de Compra
-![image](https://github.com/simonecrepaldi/analise_dados_olist/assets/77973522/381d0577-9667-4033-bd90-148677cab373)
+![image](https://github.com/simonecrepaldi/analise_dados_olist/blob/main/mapeamento_compra.png)
